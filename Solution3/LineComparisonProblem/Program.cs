@@ -19,7 +19,7 @@ namespace LineComparisonProblem
             double Y2 = Convert.ToDouble(Console.ReadLine());
 
             double Length1 = Convert.ToDouble((Math.Sqrt(((X2 - X1) * (X2 - X1)) + ((Y2 - Y1) * (Y2 - Y1)))));
-                       
+
             Console.WriteLine("Enter X3 :");
             double X3 = Convert.ToDouble(Console.ReadLine());
 
@@ -40,10 +40,18 @@ namespace LineComparisonProblem
             {
                 Console.WriteLine("Both Lines are equal");
             }
-            else
+
+            else if ((Length1.CompareTo(Length2)).Equals(-1))
             {
-                Console.WriteLine("Lines are not equal");
+                Console.WriteLine("Line1 is Smaller than Line2");
             }
-        }         
+            else if ((Length1.CompareTo(Length2)).Equals(1))
+            {
+                Console.WriteLine("Line1 is greater than Line2");
+
+            }
+
+        }
     }
 }
+
